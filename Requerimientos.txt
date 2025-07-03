@@ -4,12 +4,13 @@ Hola buenas tardes aqui se vendran los cambios realizados por dias
 
 Aplicacion web con el fin de crear una herramienta de reporteria estilo tableau o powerBI
     Herramientas a Usar: Se aceptan recomendaciones segun las normas 
-    -Python: Flask 
+    -Python: Fast API 
     Html 5
     Node Js o VueJs
     Rust: Polars 
     c++? eso se uzara para gestiones de memoria 
     MongoDB: Atlas 
+    Graph para las apis
 
 -----Requerimientos Funcionales---------------
 Crear 
@@ -37,7 +38,22 @@ Crear
 
 
 --------MEJORAS QUE SE PUEDE MEJORAR DIALOGOS-----------
+En el front primero crear una version de prueba osea meter un doc csv cualquiera y que el usuario vea 
+lo que se puede hacer en nuestra web.....
+    Esto sera a futuro primero creamos el esqueleto y al final las funciones..
+
+Esuqema a hacer Top to DOWN 
+Primero las funciones CRUD con api y Graph
+Una vez teniendo los servicios y encriptaciones se realizara conexion con el front
+    Front puede usar un framework para darle dinamismo a la web se hablara acerca del diseño web
+
 
 
 
 -------Block de actualizaciones aqui se ponen los commits y el porque--------------
+Primer commit informativo pd checar con alan como realizar pull request clase 1 ....
+
+alan va a crear todas sus carpetas para el front 
+serch todo del back 
+
+recordatorio dar acceso a alan a la bd de mongo IMPORTANTE 
