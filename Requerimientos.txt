@@ -1,0 +1,43 @@
+Hola buenas tardes aqui se vendran los cambios realizados por dias 
+-Backend Serch
+-FrontEnd Aan
+
+Aplicacion web con el fin de crear una herramienta de reporteria estilo tableau o powerBI
+    Herramientas a Usar: Se aceptan recomendaciones segun las normas 
+    -Python: Flask 
+    Html 5
+    Node Js o VueJs
+    Rust: Polars 
+    c++? eso se uzara para gestiones de memoria 
+    MongoDB: Atlas 
+
+-----Requerimientos Funcionales---------------
+Crear 
+
+
+
+
+
+
+----Requerimientos no Funcionales------------
+
+
+
+
+
+
+-----Carpetas ----------------
+
+
+
+
+
+
+
+
+
+--------MEJORAS QUE SE PUEDE MEJORAR DIALOGOS-----------
+
+
+
+-------Block de actualizaciones aqui se ponen los commits y el porque--------------
