@@ -1,3 +1,38 @@
+se van a crear dos ramas para que cada uno trabaje en su espacio una rama backend y otra front FrontEnd
+
+
+git pull origin backend  # o frontend según la rama
+# hacen cambios
+
+
+git add .
+git commit -m "Lo que hicieron"
+git push origin backend  # o frontend
+
+
+para ver el trabajo del otro 
+git fetch
+git checkout frontend   # para ver lo que hizo tu amigo
+
+
+para cambiar al main 
+git checkout main
+git pull origin main
+
+
+y para fusionar 
+
+git merge backend      # o frontend
+git push origin main
+
+
+
+
+
+
+
+
+
 Hola buenas tardes aqui se vendran los cambios realizados por dias 
 -Backend Serch
 -FrontEnd Aan
