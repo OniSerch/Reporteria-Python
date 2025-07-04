@@ -12,6 +12,60 @@ Aplicacion web con el fin de crear una herramienta de reporteria estilo tableau 
     MongoDB: Atlas 
     Graph para las apis
 
+
+
+
+
+
+----------------COMANDOS DE GITHUB----------------
+CUANDO RECIEN SE INSTLA Y SE ABRE EN UNA EXTENSION O EN EL GITBASH SE DEBE DE AÑADIR EL CORREO Y USUARIO 
+
+
+git config --global user.name "Tu Nombre"
+git config --global user.email "tucorreo@example.com"
+
+PARA INICIAR UN REPOSITORIO 
+git init
+
+
+PARA REALIZAR UN COMMIT PUEDE SER DESDE LAS RAMAS DEL GIT BASH O VS CODE O EN COMANDOS 
+git add .                     # Agrega todos los archivos al staging
+git commit -m "Primer commit"
+
+
+CONECTAR EL REPOSITORIO PERO ESTE PRIMERO LO CREA 
+git remote add origin https://github.com/tuusuario/tu-repo.git
+git branch -M main
+git push -u origin main
+
+
+
+CICLO DE TRABAJO CADA ACTUALIZACION 
+git pull origin main          # Trae cambios remotos (de otros)
+# Edita tu código
+
+
+git add .
+git commit -m "Mensaje claro del cambio"
+git push origin main          # Sube tus cambios a GitHub
+
+CUANDO SE TIENE MAS DE UNA RAMA O BRANCH 
+git checkout -b nueva-rama
+
+SE SUBE CON ESTE COMANDO 
+git push -u origin nueva-rama
+
+REVERTIR CAMBIOS 
+git log --oneline
+
+VOLVER A UNA VERSION ANTERIOR 
+git checkout <id_commit>
+
+CANCELAR CAMBIOS 
+git restore archivo.txt
+
+
+
 -----Requerimientos Funcionales---------------
 Crear 
 
