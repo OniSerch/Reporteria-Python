@@ -1,0 +1,33 @@
+Hola buenas tardes Alan aqui vamos a realizar nuestra arquitectura para la app
+
+Se tiene como primer punto el usuario
+usuario- Front End usando(vue.js + GraphQL)
+    GraphQL API (fast api+ Strawberry )
+
+    Procesamiento de datos(pthon + polars + asyncio)
+Aceleracion de datos con c++ y autentificacion de usaurios con MongoDB
+
+
+Que se va instalar osea dependencias con Python:
+    pip install fastapi uvicorn python-multipart
+    pip install motor 
+    pip install dnspython
+    pip install passlib[bcrypt] python-jose
+    pip install strawberry-graphql[fastapi]
+    pip install polars pyxlsb openpyxl
+    pip install aiofiles
+
+se instala rust desde python
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+pip install maturin
+
+dentro de rust:
+# Cargo.toml
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["extension-module"] }
+
+y se compila con : maturin develop
+
