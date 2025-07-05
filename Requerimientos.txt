@@ -32,6 +32,11 @@ git commit -m "avance en login"
 git push origin frontend-dev
 
 
+para que se suba a ambas ramas tanto main como a tu rama se usa 
+git commit -m "Se añadio mas comenados del git"
+
+git push origin backend o frontend-dev dependiendo 
+
 
 
 
@@ -41,6 +46,8 @@ git fetch origin
 git checkout frontend-dev o backend
 git pull origin frontend-dev o backend
 
+
+git add .  ---añadimos todos los cambios  
 
 
 git pull origin backend  # o frontend según la rama
