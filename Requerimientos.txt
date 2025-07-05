@@ -37,7 +37,10 @@ git commit -m "Se añadio mas comenados del git"
 
 git push origin backend o frontend-dev dependiendo 
 
-
+con estos comandos hacvemos un merge y se guardan en la rama 
+git checkout main
+git merge backend
+git merge frontend-dev
 
 
 
