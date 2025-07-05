@@ -1,5 +1,47 @@
 se van a crear dos ramas para que cada uno trabaje en su espacio una rama backend y otra front FrontEnd
 
+se crearon las ramas cada uno trabjaara en su rama para ir a su rama es el comando 
+git checkout (frontend-dev o backend )
+
+y realizamos un pull
+git pull origin (frontend-dev o backend ) # depende cual sea 
+
+
+y vemos en cual rama estamos con el comando
+git branch
+
+
+
+-------------ver las ramas remotas---------
+git fetch origin
+git branch -r
+
+
+vas a ver algo asi : origin/main
+origin/backend
+origin/frontend-dev
+
+
+creamos la rama remota 
+git checkout -b frontend-dev origin/frontend-dev
+
+Ahora está trabajando en la rama frontend-dev. Puede editar, hacer commits, y luego subir cambios así:
+
+git add .
+git commit -m "avance en login"
+git push origin frontend-dev
+
+
+
+
+
+
+------ como ver los avances del otro--------
+git fetch origin
+git checkout frontend-dev o backend
+git pull origin frontend-dev o backend
+
+
 
 git pull origin backend  # o frontend según la rama
 # hacen cambios
