@@ -93,7 +93,7 @@ Aplicacion web con el fin de crear una herramienta de reporteria estilo tableau 
     Herramientas a Usar: Se aceptan recomendaciones segun las normas 
     -Python: Fast API 
     Html 5
-    Node Js o VueJs
+    VueJs
     Rust: Polars 
     c++? eso se uzara para gestiones de memoria 
     MongoDB: Atlas 
