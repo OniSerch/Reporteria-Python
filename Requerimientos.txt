@@ -32,6 +32,20 @@ git commit -m "avance en login"
 git push origin frontend-dev
 
 
+
+
+
+para hacer commits en este caso de una rama a otra 
+
+git branch para ver en cual rama esoy
+
+git checkout para cambiar de rama 
+
+git pull para hacer un pull request 
+
+git merge para copiar y pegar
+
+
 para que se suba a ambas ramas tanto main como a tu rama se usa 
 git commit -m "Se añadio mas comenados del git"
 
