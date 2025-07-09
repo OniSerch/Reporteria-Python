@@ -1,0 +1,1 @@
+#Funciones que conectan modelos con la logica 

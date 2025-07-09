@@ -31,3 +31,23 @@ pyo3 = { version = "0.21", features = ["extension-module"] }
 
 y se compila con : maturin develop
 
+
+
+Se ocupara el MVC , Un Modelo de datos la Vista de los datos y el Controlador de Datos 
+estos estaran subdivividos en carpetas y posiblmente usando asyncio para rapidez 
+nota esto del backend 
+
+en frontend sera el Modelo Vista Zona 
+
+
+
+user_routes.py: recibe el POST /registro, y llama a:
+
+user_service.py: valida lógica (¿usuario existe?), llama a:
+
+security.py: genera hash con crypto_rust.py
+
+user_model.py: guarda en Mongo
+
+
+
