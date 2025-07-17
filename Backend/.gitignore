@@ -1,0 +1,11 @@
+# Ignorar archivos sensibles
+.env
+
+# Directorios comunes a ignorar
+__pycache__/
+.vscode/
+env/
+venv/
+*.log
+*.sqlite3
+*.db
