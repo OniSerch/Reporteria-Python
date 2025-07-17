@@ -5,7 +5,7 @@ usuario- Front End usando(vue.js + GraphQL)
     GraphQL API (fast api+ Strawberry )
 
     Procesamiento de datos(pthon + polars + asyncio)
-Aceleracion de datos con c++ y autentificacion de usaurios con MongoDB
+Aceleracion de datos con c++ y autentificacion de usuarios con MongoDB
 
 
 Que se va instalar osea dependencias con Python:
@@ -42,12 +42,37 @@ en frontend sera el Modelo Vista Zona
 
 
 user_routes.py: recibe el POST /registro, y llama a:
-
 user_service.py: valida lógica (¿usuario existe?), llama a:
-
 security.py: genera hash con crypto_rust.py
-
 user_model.py: guarda en Mongo
+
+
+------------Arquitectura de backend------------
+Backend
+    Core :arquitectura del negocio 
+
+
+
+
+
+
+----Arquitectura de la DB--------
+Se usara MongoDB utilizando Json para las cargas de los archivos 
+
+porque usarlo ... rompe el paradima de las relaciones y es directo el guardado de datos son archivos
+seran de forma con request ....
+
+Se tendra en usuario la contraseña encriptada con hash y sha para darle dinamismo y ocuparemos un lenguaje esoterico 
+para una doble "encriptacion"
+
+
+
+
+
+
+
+------------------Arquitectura del Front end--------------
+
 
 
 

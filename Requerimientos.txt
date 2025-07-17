@@ -1,3 +1,15 @@
+----------Comando fast Api------------
+no teniendo un entorno emulable como flask fastapi utiliza comandos 
+
+
+Backend es la carpeta donde esta la app en este caso nuestro main
+
+uvicorn Backend.run:app --reload   
+
+
+
+
+
 se van a crear dos ramas para que cada uno trabaje en su espacio una rama backend y otra front FrontEnd
 
 se crearon las ramas cada uno trabjaara en su rama para ir a su rama es el comando 
