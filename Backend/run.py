@@ -1,9 +1,6 @@
 from fastapi import FastAPI
+from Backend.Routes import usuarios
 
-# Crear una instancia de la aplicación FastAPI
 app = FastAPI()
-
-# Definir una ruta básica
-@app.get("/")
-def read_root():
-    return {"message": "Hello World"}
+# Incluimos las rutas de usuarios en la aplicación FastAPI
+app.include_router(usuarios.usuarios)
