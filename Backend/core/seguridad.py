@@ -1,1 +1,0 @@
-#Encriptacion y brainfuck para la db

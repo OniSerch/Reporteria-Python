@@ -1,1 +1,0 @@
-#Validaciones PyDantic entrada y salida

@@ -1,0 +1,21 @@
+Se debe de instalar un entorno en env ademas de 
+pip install fastapi
+
+ademas de un server para emular fastapi
+
+en este caso unicorn
+
+pip install unicorn 
+
+para ejecutar un codigo se usa 
+        carpeta---archivo.py
+ uvicorn Backend.run:app      
+
+ routes -- rutas de nuestra api
+ models -- modelar los datos modelo de datos db
+ 
+ 
+ schemas -- definir los datos que se van a recibir y enviar
+        peticiones y respuestas
+ confi--- configraciones del proyecto 
+        

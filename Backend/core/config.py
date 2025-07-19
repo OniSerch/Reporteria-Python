@@ -1,1 +1,0 @@
-#Logica del negocio y configuraciones del entorno 
