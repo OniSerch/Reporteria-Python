@@ -4,12 +4,14 @@
 def userEntity(item) -> dict:
     return {
         "_id": str(item["_id"]),
-        "Usuario": item.get("Usuario"),
-        "PassHash": item.get("PassHash"),
-        "Correo": item.get("Correo"),
-        "Rol": item.get("Rol"),
-        "Plan": item.get("Plan", {}),
-        "Logueo": item.get("Logueo", {})
+        "usuario": item.get("usuario"),
+        "email": item.get("email"),
+        "pass_hash": item.get("pass_hash"),
+        "rol": item.get("rol"),
+        "pago": item.get("pago", False),
+        "activo": item.get("activo", True),
+        "plan": item.get("plan", {}),
+        "logueo": item.get("logueo", {})
     }
 
 def usersEntity(items) -> list:
