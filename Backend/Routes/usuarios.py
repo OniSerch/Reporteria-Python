@@ -42,21 +42,11 @@ def buscar_unico_usuario(id: str):
 
 
 
-<<<<<<< HEAD
-@usuarios.put('/usuarios/{id}')#obtener usuario por id
-def actualizar_usuario(id: str, usuario: Usuarios):
-    usuarios_collection.find_one_and_update(
-        {"_id": ObjectId(id)},
-        {"$set": usuario.dict(exclude_unset=True, exclude={"pass_hash"})}
-        )
-    return {"mensaje": f"Hola Mundo desde la ruta de usuarios con id {id}"}  
-=======
 @usuarios.put('/usuarios/{id}', response_model=Usuarios,tags=["usuarios"])#obtener usuario por id
 def actualizar_usuario(id:str ,user: Usuarios):
     #busqueda de la db
     usuarios_collection.find_one_and_update({"_id": ObjectId(id)}, {"$set": user.dict()})# actualiza el usuario por id
     return userEntity(usuarios_collection.find_one({"_id": ObjectId(id)})) ##actualiza el usuario por id
->>>>>>> backend
 
 
 
