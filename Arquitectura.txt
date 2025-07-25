@@ -72,7 +72,14 @@ para una doble "encriptacion"
 
 
 ------------------Arquitectura del Front end--------------
+se debe instalar node js de ahi el vue.js
+se ocupa instalar vite y la version 3 de vue ademas de vue router
 
+para instlar se ocupa npm install mas las dependecias 
+    npm install vue-router 
+    npm install axios
+
+para ejecutar vue se usa npm run dev 
 
 
 
