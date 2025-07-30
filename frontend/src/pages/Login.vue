@@ -1,39 +1,19 @@
 <template>
-  <div class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0e101c] via-[#1a1c29] to-[#0e101c] overflow-hidden">
+  <div class="login-container">
+    <div class="login-card">
+      <h2>Iniciar sesión</h2>
 
-    <!-- Fondo con imagen nebulosa -->
-    <div class="absolute inset-0 bg-[url('/nebula.png')] bg-cover opacity-20 blur-sm"></div>
+      <form @submit.prevent="handleLogin">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" v-model="form.email" placeholder="usuario@empresa.com" />
 
-    <!-- Panel central tipo vidrio -->
-    <div class="relative bg-white/10 backdrop-blur-xl p-10 rounded-3xl border border-white/10 shadow-[0_0_40px_#8b5cf690] w-full max-w-md z-10">
-      <h2 class="text-3xl font-bold text-white text-center mb-6">Iniciar sesión</h2>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" v-model="form.password" placeholder="••••••••" />
 
-      <form @submit.prevent="handleLogin" class="space-y-4">
-        <input
-          v-model="form.email"
-          type="email"
-          placeholder="Correo electrónico"
-          class="w-full p-3 rounded-xl bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
-        />
-
-        <input
-          v-model="form.password"
-          type="password"
-          placeholder="Contraseña"
-          class="w-full p-3 rounded-xl bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-        />
-
-        <button
-          type="submit"
-          class="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-500 hover:to-cyan-400 text-white py-3 rounded-xl font-bold hover:scale-105 transition-transform shadow-lg"
-        >
-          Entrar
-        </button>
+        <button type="submit">Entrar</button>
       </form>
 
-      <router-link to="/register" class="block text-center text-cyan-300 mt-4 hover:underline">
-        ¿No tienes cuenta? Regístrate
-      </router-link>
+      <router-link to="/register" class="register-link">¿No tienes cuenta? Regístrate</router-link>
     </div>
   </div>
 </template>
@@ -54,3 +34,107 @@ const handleLogin = async () => {
   }
 }
 </script>
+
+<style scoped>
+.login-container {
+  background: url('/bg-pattern.png') center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Card con efecto glassmorphism */
+.login-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+.login-card h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #f9fafb;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #e0e7ff;
+}
+
+.login-card input {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+}
+
+.login-card input::placeholder {
+  color: #cbd5e1;
+}
+
+.login-card input:focus {
+  outline: 2px solid #60a5fa;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.login-card button {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.2rem;
+  color: #93c5fd;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
