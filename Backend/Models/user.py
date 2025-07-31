@@ -7,8 +7,8 @@ from datetime import datetime
 #Clase para el plan del usuario anual o mensual o gratis
 class Plan(BaseModel):
     nombre: str
-    fecha_inicio: datetime
-    fecha_fin: datetime 
+    fecha_inicio: Optional[datetime] = None
+    fecha_fin: Optional[datetime] = None
 
 #clase para el logueo del usuario el conteo es para que no pueda subir mas archivos dependiendo del plan
 class Logueo(BaseModel):
