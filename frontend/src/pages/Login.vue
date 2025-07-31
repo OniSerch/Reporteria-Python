@@ -26,7 +26,10 @@ const form = ref({ email: '', password: '' })
 
 const handleLogin = async () => {
   try {
-    const res = await axios.post('http://localhost:8000/login', form.value)
+    const res = await axios.post('http://localhost:8000/login', {
+  email: form.value.email,
+  password: form.value.password
+})
     alert('Sesión iniciada. Token: ' + res.data.token)
     localStorage.setItem('token', res.data.token)
   } catch (err) {

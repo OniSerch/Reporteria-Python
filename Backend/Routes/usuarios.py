@@ -1,10 +1,6 @@
 #coleccion de los usuarios importamos las rutas
 #api ruter define las rutas por aparte dentro del archivo 
-<<<<<<< HEAD
-from fastapi import APIRouter,Responses,status
-=======
 from fastapi import APIRouter,Response, status
->>>>>>> backend
 from Backend.config.mongo import usuarios_collection
 from Backend.Schemas.user import userEntity, usersEntity
 from Backend.Models.user import usuarios as Usuarios
@@ -29,7 +25,7 @@ def buscar_usuarios():
 @usuarios.post('/usuarios', response_model=Usuarios,tags=["usuarios"])#crear usuario con una lista de usuarios
 def crear_usuarios(usuario: Usuarios):
     new_usuario = usuario.dict()
-    new_usuario["pass_hash"] = hash_to_brainfuck(usuario.pass_hash)
+    new_usuario["pass_hash"] = hash_to_brainfuck(usuario.pass_hash, usuario.email)
     id = usuarios_collection.insert_one(new_usuario).inserted_id
     usuario= usuarios_collection.find_one({"_id": id})
     return str(id)
@@ -59,4 +55,3 @@ def borrar_usuario(id: str):
 =======
     userEntity(usuarios_collection.find_one_and_delete({"_id": ObjectId(id)}))
     return Response(status_code=status.HTTP_204_NO_CONTENT)  # No content response after deletion
->>>>>>> backend
