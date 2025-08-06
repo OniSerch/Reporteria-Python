@@ -1,7 +1,7 @@
 #coleccion de los usuarios importamos las rutas
 #api ruter define las rutas por aparte dentro del archivo 
-import datetime
-from fastapi import APIRouter, HTTPException,Response, status
+from datetime import datetime
+from fastapi import APIRouter, HTTPException, Request,Response, status
 from pydantic import BaseModel
 from Backend.config.mongo import usuarios_collection
 from Backend.Schemas.user import userEntity, usersEntity
@@ -69,7 +69,8 @@ def login_user(datos: LoginInput):
     raise HTTPException(status_code=401, detail="Credenciales inválidas")
 
 @usuarios.put("/register",tags=["auth"])
-def register_users(datos:dict):
+async def register_users(request:Request):
+    datos=await request.json()
     print("Datos recibidos de froma correcta ",datos)
     #validamos que tengamos datos minimos del front
     if not all(i in datos for i in ("usuario","email","password")):
@@ -80,8 +81,8 @@ def register_users(datos:dict):
     hashed_password=hash_to_brainfuck(datos["password"],datos["email"])
     #crear el usuario con los datos minimos y por defecto 
     nuevo_usuario={
-        "usuario": datos("usuario"),
-        "email": datos("email"),
+        "usuario": datos["usuario"],
+        "email": datos["email"],
         "pass_hash": hashed_password,
         "rol": "gratis",
         "pago": False,

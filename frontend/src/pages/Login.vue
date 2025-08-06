@@ -2,17 +2,13 @@
   <div class="login-container">
     <div class="login-card">
       <h2>Iniciar sesión</h2>
-
       <form @submit.prevent="handleLogin">
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" v-model="form.email" placeholder="usuario@empresa.com" />
-
         <label for="password">Contraseña</label>
         <input type="password" id="password" v-model="form.password" placeholder="••••••••" />
-
         <button type="submit">Entrar</button>
       </form>
-
       <router-link to="/register" class="register-link">¿No tienes cuenta? Regístrate</router-link>
     </div>
   </div>
@@ -32,6 +28,7 @@ const handleLogin = async () => {
 })
     alert('Sesión iniciada. Token: ' + res.data.token)
     localStorage.setItem('token', res.data.token)
+    router.push("/reporteria")
   } catch (err) {
     alert('Error de autenticación')
   }
