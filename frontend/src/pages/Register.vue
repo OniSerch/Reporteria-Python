@@ -6,9 +6,9 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
           <input
-            v-model="form.nombre"
+            v-model="form.usuario"
             type="text"
-            placeholder="Nombre completo"
+            placeholder="Nombre Usuario"
             class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
           />
         </div>
@@ -56,9 +56,10 @@ const form = ref({ usuario:'',email: '', password: '' })
 
 const handleRegister = async () => {
   try {
-    const res = await axios.post('http://localhost:8000/register', form.value)
+    const res = await axios.put('http://localhost:8000/register', form.value)
     alert('Sesión iniciada. Token: ' + res.data.token)
     localStorage.setItem('token', res.data.token)
+    router.push("/reporteria")
   } catch (err) {
     alert('Error de autenticación')
   }
