@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import APIRouter, FastAPI
 from Backend.Routes import usuarios
 from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(
     title="API de Usuarios",

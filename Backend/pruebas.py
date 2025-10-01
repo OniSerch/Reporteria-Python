@@ -4,10 +4,15 @@ client = MongoClient(
     "mongodb+srv://sergiojairceron:1l1KR3S4W1@cluster0.03zbm47.mongodb.net/Reporteria?retryWrites=true&w=majority",
     tls=True,
     tlsAllowInvalidCertificates=True
-)
 
+
+
+    )
 try:
     db = client["Reporteria"]
+
+
+    usuarios_collection = db["Usuarios"]
     print("Colecciones:", db.list_collection_names())
     print("Usuarios:", list(db["Usuarios"].find()))
 except Exception as e:

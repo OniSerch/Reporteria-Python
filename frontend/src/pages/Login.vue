@@ -5,11 +5,15 @@
       <form @submit.prevent="handleLogin">
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" v-model="form.email" placeholder="usuario@empresa.com" />
+        
         <label for="password">Contraseña</label>
         <input type="password" id="password" v-model="form.password" placeholder="••••••••" />
+        
         <button type="submit">Entrar</button>
       </form>
-      <router-link to="/register" class="register-link">¿No tienes cuenta? Regístrate</router-link>
+      <router-link to="/register" class="register-link">
+        ¿No tienes cuenta? Regístrate
+      </router-link>
     </div>
   </div>
 </template>
@@ -17,20 +21,25 @@
 <script setup>
 import { ref } from 'vue'
 import axios from 'axios'
-
+import { useRouter } from 'vue-router' 
 const form = ref({ email: '', password: '' })
+const router = useRouter()             
 
 const handleLogin = async () => {
   try {
     const res = await axios.post('http://localhost:8000/login', {
-  email: form.value.email,
-  password: form.value.password
-})
-    alert('Sesión iniciada. Token: ' + res.data.token)
+      email: form.value.email,
+      password: form.value.password
+    })
+
+    // Guardar token en localStorage
     localStorage.setItem('token', res.data.token)
-    router.push("/reporteria")
+
+    // Redirigir a /reporteria
+    router.push('/reporteria')
   } catch (err) {
     alert('Error de autenticación')
+    console.error(err)
   }
 }
 </script>
